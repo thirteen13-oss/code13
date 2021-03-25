@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>修改</title>
+</head>
+<body>
+<h1>修改信息</h1>
+<form action="/user/update" method="post">
+    <table>
+        <tr>
+            <td>
+                用户编号
+            </td>
+            <td>
+                <input type="text" name="id" th:value="${user.id}" readonly>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                用户姓名
+            </td>
+            <td>
+                <input type="text" name="name" th:value="${user.name}">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                用户成绩
+            </td>
+            <td>
+                <input type="text" name="score" th:value="${user.score}">
+            </td>
+        </tr>
+    </table>
+    <input type="submit" value="修改">
+</form>
+</body>
+</html>
